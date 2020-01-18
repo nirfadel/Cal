@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "2b0c2422-2017-4768-ae61-75e170a4befa",
+		"name": "visa-cal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "Key contains invalid whitespace characters.",
+						"key": "Authorization ",
+						"value": "Bearer  ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\n        \"Email\" : \"nir.fadel@gmail.com\",\n        \"Password\" : \"pass\"\n      \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:19117/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19117",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "nir.fadel@gmail.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "pass",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Nir",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19117/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19117",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"warning": "Key contains invalid whitespace characters.",
+						"key": "Authorization ",
+						"value": "Bearer pWItrCyNbm3FPQs14byPg4e-rPN4Fc3bFNBz1JO6X2okEIqcvqdcCHCH2qlY9jtkizbqhUYJflzz_u76hZYlMDVlF1TF9Tj0qWclPystB8jyPR4ezsL4fqp-8MAGnmbSq1b_rGRXuJSFSIh5zkrhGwXibb9HPN5e9eSc8DbsEWl1tueQGT-89z9mrBW-jfjUGTvDUV0p12qdoHvIyUMZYwAP7AEu1-HwvsIdOzTYw9lzau_STzfU56oPlcjGHpq0dVdFGWarSBl3dDuUWIPNdwQl5W1O-yE3OUTBlfg6e8FtXkMn-nC89SyjKVcKVG2p",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:19117/api/GetData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19117",
+					"path": [
+						"api",
+						"GetData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
