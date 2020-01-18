@@ -27,7 +27,6 @@ namespace CalApiProject
             return Ok("Authorized");
         }
 
-        //[Authorize(Roles = "SuperAdmin, Admin, User")]
         [HttpPost]
         [Route("api/login")]
         public IHttpActionResult Login(User user)
